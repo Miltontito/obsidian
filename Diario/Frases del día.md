@@ -10,3 +10,9 @@ Esta frase resuena en mi ya que tengo el problema de frenarme ante nuevos retos,
 **"Me centro en iniciar la tarea y comenzar el desarrollo, los detalles se corrigen luego."** 
 **"Lo que realmente importa son las pequeñas victorias"** 
 **"La perfección se obtiene a través de las pequeñas victorias"** 
+
+# 2025-10-09
+
+---
+
+*"You cannot delegate the act of thinking"* - Alain (French philosopher, 19th century)
