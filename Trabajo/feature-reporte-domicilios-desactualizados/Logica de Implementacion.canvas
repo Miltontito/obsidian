@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"99d7dfb47ae38596","x":-140,"y":-40,"width":250,"height":60,"type":"text","text":"Calles"},
+		{"id":"340e6d30d18d69d8","x":-440,"y":-40,"width":250,"height":60,"type":"text","text":"domicilios"},
+		{"id":"a5c6b071018c7601","x":160,"y":-36,"width":250,"height":56,"type":"text","text":"localidades"},
+		{"id":"d5d5fe4688835db9","x":-340,"y":-220,"width":250,"height":60,"type":"text","text":"personas"},
+		{"id":"fc15de95ded4e2e2","x":35,"y":-220,"width":250,"height":60,"type":"text","text":"padron_federal"},
+		{"id":"1122b9a641f6a1d4","x":-386,"y":-600,"width":743,"height":60,"type":"text","text":"# Obtener domicilios potencialmente desactualizados"}
+	],
+	"edges":[]
+}
