@@ -1,11 +1,28 @@
 {
 	"nodes":[
-		{"id":"99d7dfb47ae38596","x":-140,"y":-40,"width":250,"height":60,"type":"text","text":"Calles"},
-		{"id":"340e6d30d18d69d8","x":-440,"y":-40,"width":250,"height":60,"type":"text","text":"domicilios"},
-		{"id":"a5c6b071018c7601","x":160,"y":-36,"width":250,"height":56,"type":"text","text":"localidades"},
-		{"id":"d5d5fe4688835db9","x":-340,"y":-220,"width":250,"height":60,"type":"text","text":"personas"},
-		{"id":"fc15de95ded4e2e2","x":35,"y":-220,"width":250,"height":60,"type":"text","text":"padron_federal"},
-		{"id":"1122b9a641f6a1d4","x":-386,"y":-600,"width":743,"height":60,"type":"text","text":"# Obtener domicilios potencialmente desactualizados"}
+		{"id":"2e4ca76e2a1ce2d2","type":"group","x":-1160,"y":-440,"width":835,"height":180,"label":"Inner-join"},
+		{"id":"7859ee92e2b40d24","type":"text","text":"Formatear quitando tildes y llevando todo minúscula los siguientes campos:\n- `localidades.descripcion`\n- `padron_federal.localidad` ","x":-924,"y":-110,"width":620,"height":120},
+		{"id":"b1e59745cd88b994","type":"text","text":"Son seleccionados los que cumplen todas las siguientes condiciones:\n- `personas.deleted_at` es NULO.\n- `domicilio.fecha_alta` es NO NULO.\n- `domicilio.fecha_baja` es NULO.\n- `personas.motivo_baja_id = 1 OR personas.motivo_baja_id = 2`\n- `localidades.deleted` es NULO.\n- `calles.deleted` es NULO.","x":-100,"y":-490,"width":700,"height":260},
+		{"id":"00882637553d6ba5","type":"text","text":"Filtro 1\nExcluye al domicilio si lo considera coincidente, condiciones para excluir (si se cumple alguna -> se saca el registro):\n- Si `domicilio.numero` se encuentra **entre** `padron_federal.numero - 100 AND padron_federal.numero + 100`\n- Si `padron_federal.calle` aparece dentro de `calle.descripcion` o, Si `calle.descripcion` aparece dentro de `padron_federal.calle`.","x":-100,"y":-140,"width":700,"height":240},
+		{"id":"b26368de4b1c5a51","type":"text","text":"FIltro 3\nMuestro solo si la fecha del Padrón es estrictamente más reciente:\n- `padron_federal.fecha_domicilio > domicilio.fecha_alta`","x":-34,"y":460,"width":567,"height":120},
+		{"id":"76350af3ff6cb671","type":"text","text":"FIltro 2\nExcluye si el numero SEF es 0 y las fechas de domicilio coinciden:\n- Si `padron_federal.numero = 0`\n- Si `domicilio.fecha_alta = padron_federal.fecha_domicilio`\n","x":-54,"y":200,"width":607,"height":160},
+		{"id":"340e6d30d18d69d8","type":"text","text":"domicilios","x":-1140,"y":-340,"width":250,"height":60},
+		{"id":"d5d5fe4688835db9","type":"text","text":"personas","x":-1000,"y":-420,"width":250,"height":60},
+		{"id":"a5c6b071018c7601","type":"text","text":"localidades","x":-864,"y":-340,"width":250,"height":60},
+		{"id":"99d7dfb47ae38596","type":"text","text":"Calles","x":-726,"y":-420,"width":250,"height":60},
+		{"id":"fc15de95ded4e2e2","type":"text","text":"padron_federal","x":-601,"y":-340,"width":250,"height":60},
+		{"id":"09b8abfa122cd352","type":"text","text":"# Registros de Domicilios Potencialmente Desactualizados","x":-851,"y":100,"width":500,"height":110},
+		{"id":"1122b9a641f6a1d4","type":"text","text":"# Obtener domicilios potencialmente desactualizados","x":-675,"y":-880,"width":743,"height":60},
+		{"id":"b55a873af2e167f3","x":480,"y":-780,"width":674,"height":180,"type":"text","text":"#### filter()\nEste método remueve los elementos de una colección basada en una condición. Si no cumplen la condición son removidos.\n\nLo utilizaremos para filtrar los elementos especificados."}
 	],
-	"edges":[]
+	"edges":[
+		{"id":"2cb81bf5c9b88814","fromNode":"7859ee92e2b40d24","fromSide":"top","toNode":"a5c6b071018c7601","toSide":"bottom"},
+		{"id":"3d9a97396c364f46","fromNode":"7859ee92e2b40d24","fromSide":"top","toNode":"fc15de95ded4e2e2","toSide":"bottom"},
+		{"id":"b489ac44bbf13f99","fromNode":"2e4ca76e2a1ce2d2","fromSide":"right","toNode":"b1e59745cd88b994","toSide":"left"},
+		{"id":"1c5d2b01d603a1ae","fromNode":"b1e59745cd88b994","fromSide":"bottom","toNode":"00882637553d6ba5","toSide":"top"},
+		{"id":"0cea7159ad8369d3","fromNode":"00882637553d6ba5","fromSide":"bottom","toNode":"76350af3ff6cb671","toSide":"top"},
+		{"id":"2b749b79049220ca","fromNode":"76350af3ff6cb671","fromSide":"bottom","toNode":"b26368de4b1c5a51","toSide":"top"},
+		{"id":"c769b7da73cbf8ba","fromNode":"b26368de4b1c5a51","fromSide":"left","toNode":"09b8abfa122cd352","toSide":"bottom"},
+		{"id":"48a721f77f12ca79","fromNode":"b1e59745cd88b994","fromSide":"top","toNode":"b55a873af2e167f3","toSide":"left"}
+	]
 }
