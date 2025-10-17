@@ -1,6 +1,6 @@
 Este es mi primer trabajo donde intento dejar de lado el Code Vibing, tengo que aprender y empezar a pensar. 
 
-En un primer momento arranqué bien haciendo el analisis de la tarea, tal vez sobre-analicé la tarea en cuestión. (Esto va a pasar mucho en las primeras tareas).
+En un primer momento arranqué bien haciendo el análisis de la tarea, tal vez sobre-analicé la tarea en cuestión. (Esto va a pasar mucho en las primeras tareas).
 
 Quería no utilizar IA para el desarrollo pero el tiempo ajustado me forzó a hacerlo, de igual forma aprendí algo importante.
 

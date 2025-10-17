@@ -1,0 +1,2 @@
+- [ ] Estudiar DSA, ¿qué es?, ¿para qué sirve?, ¿cómo lo hago?
+- [ ] Estudiar System Design, ¿qué es?, ¿para qué sirve?, ¿cómo lo hago?
