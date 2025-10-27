@@ -1,0 +1,13 @@
+- [ ] Terminar el Frontend.
+	- [ ] Terminar Catálogos.
+	- [ ] Terminar Inventarios.
+		- [ ] Editar Articulo.
+		- [ ] Editar Inventario.
+	- [ ] Terminar Usuarios.
+		- [ ] Perfil de Usuarios.
+		- [ ] Asignación de Roles.
+	- [ ] Terminar Configuraciones.
+	- [x] Terminar Login.
+	- [x] Terminar Registro.
+- [ ] Terminar el Backend.
+- [ ] Conectar Todo.
